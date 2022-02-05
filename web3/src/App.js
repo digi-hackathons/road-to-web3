@@ -1,4 +1,4 @@
-import "./App.css";
+import "./css/App.css";
 import Navbar from "./components/Navbar";
 import Card from "./components/Card";
 import React, { useState, useEffect } from "react";
@@ -12,43 +12,21 @@ import { injected } from "./controller/Connectors";
 
 function App(props) {
 	const { active, account, library, connector, activate, deactivate } = useWeb3React();
-	const {active: networkActive,error: networkError,activate: activateNetwork,} = useWeb3React();
-	const [loaded, setLoaded] = useState(false);
 	const [wallet,setWallet] = useState();
 	const [nickname,setNickname] = useState("Nickname")
 
-
-	async function restoureConnection() {
-		injected.isAuthorized().then((isAuthorized) => {
-			setLoaded(true);
-			if (isAuthorized && !networkActive && !networkError) {
-				activateNetwork(injected);
-			}
-		});
-	}
-
-	async function connect() {
+	async function connect(to) {
 		try {
 			await activate(injected);
-			window.location.href="/welcome";
+			window.location.href=to;
 		} catch (ex) {
 			console.log(ex);
 		}
 	}
 
-
-	restoureConnection();
-      useEffect(() =>{
-
-        if(setWallet != undefined){
-          setWallet(account)
-        }
-        
-      });
-
 	return (
 		<div>
-			<Navbar wallet={wallet} nickname={nickname}/>
+			<Navbar nickname={nickname}/>
 			<div className="app">
 				<div className="title">
 					Join <span className="purple">Lingo</span>

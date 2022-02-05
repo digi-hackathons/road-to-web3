@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import Welcome from './Welcome';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Web3ReactProvider } from "@web3-react/core"
 import { Web3Provider } from "@ethersproject/providers";
@@ -17,6 +17,7 @@ ReactDOM.render(
   <Router>
     <Routes>
       <Route exact path="/" element={<App/>} />
+      <Route exact path="/welcome" element={<Welcome/>} />
       </Routes>
     </Router>
     </Web3ReactProvider>,
