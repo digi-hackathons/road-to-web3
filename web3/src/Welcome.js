@@ -21,9 +21,9 @@ function Welcome() {
             Choose a language
           </div>
           <ul>
-            <li><img src="/images/usa.png"/>English</li>
-            <li><img src="/images/japan.png"/>Japonese</li>
-            <li><img src="/images/brazil.png"/>Portuguese</li>
+            <li><div className="item"><img src="/images/usa.png"/>English</div></li>
+            <li><div className="item"><img src="/images/japan.png"/>Japonese</div></li>
+            <li><div className="item"><img src="/images/brazil.png"/>Portuguese</div></li>
           </ul>
         </div>
 
@@ -38,17 +38,26 @@ function Welcome() {
           </ul>
         </div>
       </div>
-      <div>
-        <div>
-          <img src="/images/avatar1.png"/>
-          <div>Hello. Welcome to LingoSwap!<br></br>Before we start, please tell me your name.</div>
-        </div>
-        <div>
-        <img src="/images/avatar2.png"/>
-          <div>
-            <input type="text"></input>
-            <button>START</button>
+      <div className="start-form">
+        <div className="talk">
+        <img className="avatar-1" src="/images/avatar1.png"/>
+          <div className="baloon">
+           <p>Hello. Welcome to LingoSwap!<br></br>Before we start,<br></br>please tell me your name.</p> 
+            </div>
           </div>
+          
+          <div>
+        </div>
+        <div className="talk">
+
+          <div className="baloon">
+            <div className="join">
+              <input type="text" placeholder="My name is.."></input>
+              <button>START</button>
+            </div>
+            
+          </div>
+          <img className="avatar-2" src="/images/avatar2.png"/>
         </div>
       </div>
     </div>

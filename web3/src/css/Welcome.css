@@ -20,13 +20,46 @@
     gap: 60px;
 }
 .welcome .select{
+    display: block;
+    width: 300px;
     max-width: 400px;
     background-color: #fff;
     border-radius: 10px;
 }
 
+.welcome .select li{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+
+}
+
+.welcome .select .item{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 150px;
+}
+.welcome .select li img{
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+
+}
+.welcome .select ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
 .welcome .select-title{
     height: 40px;
+    margin-bottom: 10px;
     background-color: #202020;
     color:#fff;
     border-top-left-radius: 10px;
@@ -34,4 +67,73 @@
     text-align: center;
     line-height: 40px;
 
+}
+
+.welcome .start-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 660px;
+    height: 600px;
+    gap: 30px;
+    border-radius: 10px;
+    margin-top: 60px;
+    background: #fff;
+    margin-bottom: 60px;
+}
+
+.welcome .talk{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.talk .avatar-1{
+    height: 200px;
+    width: 200px;
+}
+
+.talk .avatar-2{
+    height: 200px;
+    width: 200px;
+    transform: scaleX(-1);
+}
+
+.welcome .baloon{
+    display: flex;
+    border-radius: 10px;
+    background-color: #EEEEEE;
+    width: 300px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome .join{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome .join input{
+    width: 200px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    border:1px solid rgb(207, 207, 207);
+    border-radius: 10px;
+}
+.welcome .join button{
+    width: 100%;
+    height: 50px;
+    background-color: #9773FF;
+    border: none;
+    border-radius: 10px;
+    color:white;
+    box-shadow: 10px 15px 20px 0px rgba(0, 0, 0, 0.15);
 }

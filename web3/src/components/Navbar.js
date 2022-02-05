@@ -32,6 +32,7 @@ function Navbar(props) {
 	return (
 		<div>
 			<div className="navbar">
+				<div className="left-bar">
 				<div className="user-bar">
 					<div className="avatar">
 						<img src="images/face.png" />
@@ -40,11 +41,19 @@ function Navbar(props) {
 						<div className="name">{props.nickname}</div>
 						<div className="wallet">{props.wallet}</div>
 					</div>
+					
 				</div>
+				<div className="home">
+						<a href="/">HOME</a>
+					</div>
+				</div>
+				
 
 				<div className="logo">
-					<span className="purple">Lingo</span>Swap
+					<span className="purple">LINGO</span>SWAP
 				</div>
+
+				
 			</div>
 		</div>
 	);

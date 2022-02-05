@@ -26,7 +26,7 @@ function App(props) {
 
 	return (
 		<div>
-			<Navbar nickname={nickname}/>
+			<Navbar nickname={nickname} setWallet={setWallet} wallet={wallet}/>
 			<div className="app">
 				<div className="title">
 					Join <span className="purple">Lingo</span>
