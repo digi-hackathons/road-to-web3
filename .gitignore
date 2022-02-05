@@ -435,3 +435,5 @@ dist
 .env.development.local
 .env.test.local
 .env.production.local
+/backend/mnemonic.txt
+/backend/0x62238d3f47255bc5e39d9cb9155e3d49dbd904c9.txt
