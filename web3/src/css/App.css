@@ -10,6 +10,10 @@ body {
   margin: 0;
 }
 
+*{
+  padding: 0;
+  margin: 0;
+}
 
 .app{
   display: flex;
@@ -21,18 +25,26 @@ body {
   font-size: 60px;
 }
 
-.app .title span{
+.app .title .purple{
   font-weight: 700;
-  color:#907CE1;
+  color:#9773FF;
 }
 
+.app .title .gray{
+  font-weight: 600;
+  color:#717171;
+}
 .app .text{
+  max-width: 650px;
   margin-top: 20px;
   margin-bottom: 20px;
+  font-size: 20px;
+  text-align: center;
 
 }
 .app .cards{
   display: flex;
-  margin-top: 30px;
-  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  gap: 80px;
 }
