@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card.css";
 import injectSheet from 'react-jss';
-import { Link } from 'react-router-dom'
+
 
 const styles ={
     button:{
@@ -20,9 +20,9 @@ function Card(props) {
       <div className="info">
         <h1>{props.title}</h1>
         <p className="desc">{props.desc}</p>
-        <Link to={props.url}>
-        <button type="button" className={classes.button}>{props.button}</button>
-        </Link>
+
+        <button type="button" onClick={props.click} className={classes.button}>{props.button}</button>
+
       </div>
     </div>
   );

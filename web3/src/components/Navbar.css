@@ -16,6 +16,13 @@
     
 }
 
+.navbar .wallet{
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .navbar .avatar{
     margin-left: 40px;
 }
@@ -30,9 +37,10 @@
 }
 
 .navbar .logo{
+    margin-left: 20px;
     margin-right: 40px;
     font-size: 25px;
-    font-weight: 700;
+    font-weight: 600;
     color: #717171;
 }
 .navbar .logo .purple{
@@ -41,4 +49,14 @@
 .navbar .avatar img{
     height: 80px;
     width: 80px;
+}
+.navbar .home{
+    display: flex;
+    margin-left: 50px;
+    font-weight: 700;
+
+}
+
+.navbar .home a {
+    text-decoration: none;
 }
