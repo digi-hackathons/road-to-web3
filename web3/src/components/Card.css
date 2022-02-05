@@ -3,8 +3,8 @@
     background-color: #fff;
     border-radius: 10px;
     margin-bottom: 20px;
-    width: 600px;
-    height: 400px;
+    width: 550px;
+    height: 350px;
     align-items: center;
     box-shadow: 20px 25px 20px 0px rgba(0, 0, 0, 0.15);
 }
@@ -20,13 +20,19 @@
 
 .card .info{
     margin-right: 20px;
+    max-width: 250px;
+}
+
+.card h1{
+    font-size: 25px;
+    margin-bottom: 20px;
 }
 
 .card button{
 
     
     margin-top: 50px;
-    width: 294px;
+    width: 250px;
     height: 77px;
     border-radius: 10px;
     border:none;

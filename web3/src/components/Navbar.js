@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar(props) {
 	return (
 		<div>
 			<div className="navbar">
@@ -10,8 +10,8 @@ function Navbar() {
 						<img src="images/face.png" />
 					</div>
 					<div className="user">
-						<div className="name">Nickname</div>
-						<div className="wallet">0x00000000000...</div>
+						<div className="name">{props.nickname}</div>
+						<div className="wallet">{props.wallet}</div>
 					</div>
 				</div>
 
