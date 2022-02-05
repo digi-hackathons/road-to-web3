@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700");
+* {
+  font-family: "Poppins";
+}
+body {
+  background-color: #8dbbf1;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+
+
+.app{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app .title{
+  margin-top: 80px;
+  font-size: 60px;
+}
+
+.app .title span{
+  font-weight: 700;
+  color:#907CE1;
+}
+
+.app .text{
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+.app .cards{
+  display: flex;
+  margin-top: 30px;
+  gap: 40px;
+}

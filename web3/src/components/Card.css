@@ -1,0 +1,38 @@
+.card{
+    display:flex;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 600px;
+    height: 400px;
+    align-items: center;
+    box-shadow: 20px 25px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.card .img{
+    align-items: center;
+    height: 150px;
+    width: 150px; 
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+
+.card .info{
+    margin-right: 20px;
+}
+
+.card button{
+
+    
+    margin-top: 50px;
+    width: 294px;
+    height: 77px;
+    border-radius: 10px;
+    border:none;
+    background-color: #9773FF;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    
+}
