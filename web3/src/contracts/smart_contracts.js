@@ -1,6 +1,8 @@
+// TODO use backend/deployments/
+
 export const TOKEN_CONTRACT_ADDRESS = 0x46E5287212234db3De59D74843B9bD08eC71450d;
 
-export const STORAGE_CONTRACT_ADDRESS = "0xDEB906ccD3C84F2C972B28d166D6dAed33a9FC53";
+export const STORAGE_CONTRACT_ADDRESS = "0x6Ce9B754deD085838DC4Df3093fA48c8e601A6CF";
 export const STORAGE_CONTRACT_ABI = [
     {
         "inputs": [],
@@ -17,7 +19,7 @@ export const STORAGE_CONTRACT_ABI = [
     }
 ];
 
-export const TIP_CONTRACT_ADDRESS = 0xea7221e33327D5733C1cb135096E44a3Bf4ae459;
+export const TIP_CONTRACT_ADDRESS = 0x9D97e5Db7E0ad736128C5F73A08C1ce4D640Bd9c;
 export const TIP_CONTRACT_ABI = [
     {
         "anonymous": false,
