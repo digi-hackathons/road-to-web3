@@ -144,12 +144,12 @@ function Quiz() {
     const [isImagesSet, setIsImagesSet] = useState(false)
 
     // TODO: need to read it from nav bar
-    /*const root_cid = retrieveImagesMetadataCid();*/
+    const root_cid = retrieveImagesMetadataCid();
     const SELECTED_LANGUAGE = "japanese";
-    const [images, setImages] = useState(getIpfsImagesWithCaptions());
+    const [images, setImages] = useState(getIpfsImagesWithCaptions(root_cid, SELECTED_LANGUAGE));
 
    if(!isImagesSet){
-    setImages(getIpfsImagesWithCaptions());
+    setImages(getIpfsImagesWithCaptions(root_cid, SELECTED_LANGUAGE));
     setIsImagesSet(true);
    }
 
