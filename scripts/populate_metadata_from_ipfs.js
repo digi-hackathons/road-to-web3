@@ -4,7 +4,9 @@ import * as fs from 'fs';
 import {homedir} from 'os';
 import {join} from 'path';
 
-const links = await getLinks("QmRqcTyPLu2PCfAwQEZN121myWEYpb5E5udKLygBYYUVVL", "https://dweb.link/api/v0")
+//const METADATA_ROOT_CID = "QmfLL3K4Z5PgCghpGTq7eNrrwMeXs6wZ2CtFEDFws59UiY";
+const IMAGES_ROOT_CID = "QmRqcTyPLu2PCfAwQEZN121myWEYpb5E5udKLygBYYUVVL";
+const links = await getLinks(IMAGES_ROOT_CID);
 
 for (const l of links) {
     const name = l.name.replace(/\.[^/.]+$/, "");
