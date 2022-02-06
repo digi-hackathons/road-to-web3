@@ -26,8 +26,8 @@
     align-items: center;
     margin-top: 60px;
     margin-bottom: 60px;
-    width: 50vw;
-    height: 70vh;
+    width: 1000px;
+    height: 650px;
     background-color: #fff;
     border-radius: 10px;
 }
@@ -53,14 +53,14 @@
 }
 
 
-.challange {
+
+.challange{
     height: 100%;
     display: flex;
     justify-content: center;
 
 }
-
-.challange .name {
+.challange .name{
     display: flex;
     border-radius: 10px;
     height: 60px;
@@ -72,8 +72,7 @@
     font-size: 30px;
     font-weight: 700;
 }
-
-.challange .block {
+.challange .block{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,7 +85,7 @@
     border-radius: 10px;
 }
 
-.challange img {
+.challange img{
     height: 250px;
     width: 250px;
     object-fit: cover;
@@ -94,13 +93,12 @@
 }
 
 
-.challange .options {
+.challange .options{
     display: flex;
     gap: 30px;
-
+    
 }
-
-.challange .border {
+.challange .border{
 
     display: flex;
     justify-content: center;
@@ -113,7 +111,7 @@
     margin-bottom: 10px;
 }
 
-.challange .active {
+.challange .active{
     margin-top: 10px;
     display: flex;
     justify-content: center;
@@ -125,7 +123,31 @@
 
 }
 
-.challange .button-active {
+.challange .right-choice{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 270px;
+    width: 270px;
+    background-color: #85FFB6;
+    border-radius: 10px;
+
+}
+
+.challange .wrong-choice{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 270px;
+    width: 270px;
+    background-color: #FF646D;
+    border-radius: 10px;
+
+}
+
+.challange .button-active{
     width: 300px;
     height: 50px;
     border: none;
@@ -138,7 +160,7 @@
     box-shadow: 10px 15px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
-.challange .button-disabled {
+.challange .button-disabled{
     width: 300px;
     height: 50px;
     border: none;
