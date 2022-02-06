@@ -2,19 +2,11 @@ const {utils} = require("ethers");
 const fs = require("fs");
 const chalk = require("chalk");
 
+require("@eth-optimism/hardhat-ovm");
+require("@nomiclabs/hardhat-ethers");
 require("@nomiclabs/hardhat-waffle");
 require("@tenderly/hardhat-tenderly");
 require("hardhat-deploy");
-require("@eth-optimism/hardhat-ovm");
-require("@nomiclabs/hardhat-ethers");
-
-require("@nomiclabs/hardhat-waffle");
-require("@tenderly/hardhat-tenderly");
-
-require("hardhat-deploy");
-
-require("@eth-optimism/hardhat-ovm");
-require("@nomiclabs/hardhat-ethers");
 
 const {isAddress, getAddress, formatUnits, parseUnits} = utils;
 

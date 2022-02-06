@@ -1,0 +1,35 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/LingoStorage.sol": {
+      "content": "pragma solidity ^0.8.0;\r\n\r\ncontract LingoStorage {\r\n    // https://gateway.pinata.cloud/ipfs/QmRqcTyPLu2PCfAwQEZN121myWEYpb5E5udKLygBYYUVVL?preview=1\r\n    string constant images_dir_cid = \"QmRqcTyPLu2PCfAwQEZN121myWEYpb5E5udKLygBYYUVVL\";\r\n    function get_images_dir_cid() public view returns (string memory) {\r\n        return images_dir_cid;\r\n    }\r\n}\r\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}
