@@ -44,7 +44,7 @@ Our journey begins with language.
 
 5.(when you are learner)When you get higher score than certain point, you will get token.
 
-6.(when you are teacher)When your quiz is published and solved by someone, you will get small token.
+6.(when you are teacher)When your quiz is published and solved by someone, you will get token.
 
 
 # What's new?
