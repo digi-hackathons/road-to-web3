@@ -6,10 +6,13 @@ import {useWeb3React} from "@web3-react/core";
 
 
 
+<<<<<<< HEAD
 function redirect(){
     window.location.href = "/quiz";
 }
 
+=======
+>>>>>>> d4bc5bc (Working in new navbar)
 
 function Profile(props){
 
