@@ -34,7 +34,34 @@ function Navbar(props) {
         <div>
             <div className="navbar">
                 <div className="left-bar">
-                    <div className="user-bar">
+                <div className="logo">
+                    <span className="purple">LINGO</span>SWAP
+                </div>
+                    
+                    <div className="home">
+                        <a href="/">HOME</a>
+                    </div>
+                </div>
+                <div className="learn-box">
+                    <div className="title">
+                        What would you like to do?
+                    </div>
+                        <div className="config">
+                        <select name="function" id="function">
+                        <option value="learn">Learn</option>
+                        <option value="teach">Teach</option>
+                    </select>
+                    <div className="choosen-lang">
+                        <img className="lang" src="/images/japan.png"></img>
+                        <img className="lang-sort" src="/images/sort.png"></img>
+                    </div>      
+                    <button className="not-connected">
+                        Not connected
+                    </button>
+                    </div>
+
+                </div>
+                <div className="user-bar">
                         <div className="avatar">
                             <img src="images/face.png"/>
                         </div>
@@ -44,15 +71,7 @@ function Navbar(props) {
                         </div>
 
                     </div>
-                    <div className="home">
-                        <a href="/">HOME</a>
-                    </div>
-                </div>
-
-
-                <div className="logo">
-                    <span className="purple">LINGO</span>SWAP
-                </div>
+                
 
 
             </div>

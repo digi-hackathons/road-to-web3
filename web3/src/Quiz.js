@@ -106,7 +106,12 @@ function Challange(props) {
 }
 
 function Teach(props) {
-    return <div className="main">
+
+    if(props.images != undefined){
+    }
+    
+        console.log(props)
+        return <div className="main">
         <Navbar nickname={props.nickname} wallet={props.wallet} setWallet={props.setWallet}/>
         <div className="quiz">
             <div className="block">
@@ -119,6 +124,8 @@ function Teach(props) {
             </div>
         </div>
     </div>;
+ 
+    
 }
 
 function retrieveImagesMetadataCid() {
@@ -134,15 +141,51 @@ function Quiz() {
 
     const [inQuiz, setInQuiz] = useState(true);
     const [step, setStep] = useState(0);
+    const [isImagesSet, setIsImagesSet] = useState(false)
 
     // TODO: need to read it from nav bar
-    const root_cid = retrieveImagesMetadataCid();
+    /*const root_cid = retrieveImagesMetadataCid();*/
     const SELECTED_LANGUAGE = "japanese";
-    const [images, setImages] = useState(getIpfsImagesWithCaptions(root_cid, SELECTED_LANGUAGE));
+    const [images, setImages] = useState([
+        {
+            "image": "",
+            "caption": ""
+        },
+        {
+            "image": "",
+            "caption": ""
+        },
+        {
+            "image": "",
+            "caption": ""
+        },
+    ]);
+
+   if(!isImagesSet){
+    setImages([
+        {
+            "image": "https://images.unsplash.com/photo-1629567508174-f59400e6d329?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=802&q=80",
+            "caption": "コーヒー"
+        },
+        {
+            "image": "https://images.unsplash.com/photo-1612506266679-606568a33215?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+            "caption": "アボカド"
+        },
+        {
+            "image": "https://images.unsplash.com/photo-1581375321224-79da6fd32f6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+            "caption": "ココナッツ"
+        },
+    ])
+    setIsImagesSet(true);
+   }
+
     const imagesOrder = iota(images.length);
+    console.log(imagesOrder)
     shuffleArray(imagesOrder);
     const testOrder = iota(images.length);
     shuffleArray(testOrder);
+    
+    
     const maxSteps = 3;
 
     return inQuiz ?

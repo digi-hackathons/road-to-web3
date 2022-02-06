@@ -19,7 +19,7 @@ ReactDOM.render(
     <Web3ReactProvider getLibrary={getLibrary}>
         <Router>
             <Routes>
-                <Route exact path="/" element={<App/>}/>
+                <Route exact path="/" element={<Home/>}/>
                 <Route exact path="/welcome" element={<Welcome/>}/>
                 <Route exact path="/quiz" element={<Quiz/>}/>
                 <Route exact path="/reward" element={<Reward/>}/>
