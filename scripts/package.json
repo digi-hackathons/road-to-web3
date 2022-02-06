@@ -1,0 +1,7 @@
+{
+  "name": "scripts-for-testing",
+  "type": "module",
+  "dependencies": {
+    "ipfs-http-client": "^56.0.0"
+  }
+}

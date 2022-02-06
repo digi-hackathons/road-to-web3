@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
+import './css/Reward.css'
 function Reward(props) {
 	const [wallet, setWallet] = useState();
 	const [nickname, setNickname] = useState("Nickname");
@@ -10,12 +11,14 @@ function Reward(props) {
 				wallet={props.wallet}
 				setWallet={props.setWallet}
 			/>
-			<div className="block">
+            <div className="reward">
+                <div className="wrapper">
+                <div className="block">
 				<div>Congratulations! Challenge Accomplished</div>
-				<div>
+				<div className="status">
 					<img src="images/pencil2.png" /> -2
 				</div>
-				<div>
+				<div className="status">
 					<img src="images/coin.png" /> +1
 				</div>
 			</div>
@@ -27,6 +30,10 @@ function Reward(props) {
                     <button>GIVE A TIP</button>
                 </div>
             </div>
+                </div>
+            
+            </div>
+			
 		</div>
 	);
 }

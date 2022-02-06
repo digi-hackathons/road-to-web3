@@ -1,11 +1,12 @@
 
-.quiz{
+.quiz {
     height: 100%;
     display: flex;
     justify-content: center;
 
 }
-.quiz .name{
+
+.quiz .name {
     display: flex;
     border-radius: 10px;
     height: 60px;
@@ -17,7 +18,8 @@
     font-size: 30px;
     font-weight: 700;
 }
-.quiz .block{
+
+.quiz .block {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,14 +32,14 @@
     border-radius: 10px;
 }
 
-.quiz img{
+.quiz img {
     height: 300px;
     width: 300px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.quiz button{
+.quiz button {
     width: 300px;
     height: 50px;
     border: none;
