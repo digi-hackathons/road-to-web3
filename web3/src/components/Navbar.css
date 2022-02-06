@@ -12,8 +12,12 @@
 }
 
 .navbar .user-bar {
+    margin-left: 20px;
+    margin-right: 20px;
     display: flex;
+    background-color: #E6E6E6;
     align-items: center;
+    border-radius: 10px;
 
 }
 
@@ -63,4 +67,66 @@
 
 .navbar .home a {
     text-decoration: none;
+}
+
+.navbar .learn-box{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+}
+
+.navbar .learn-box .not-connected{
+    border-radius: 10px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    background-color: rgb(177, 177, 177);
+    color:rgb(247, 247, 247);
+}
+
+.navbar .learn-box .connected{
+    border-radius: 10px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    background-color: #4BFF93;
+}
+
+.navbar .learn-box select{
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: none;
+    background-color: #E5E5E5;
+}
+
+
+.navbar .learn-box .title{
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.navbar .learn-box .config{
+    display: flex;
+    gap: 15px;
+}
+
+.navbar .learn-box .choosen-lang{
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+
+.navbar .learn-box .lang{
+    height: 30px;
+}
+.navbar .learn-box .lang-sort{
+    margin-left: 5px;
+    height: 10px;
+    width: 10px;
 }

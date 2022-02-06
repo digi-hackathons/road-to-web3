@@ -10,9 +10,7 @@
     align-items: center;
 }
 
-
 .homepage .box-1{
-    
     margin-right: 150px;
 }
 .homepage .box-1 .title{
@@ -22,21 +20,25 @@
 }
 
 .homepage .box-1 .desc{
-    display: flex;
+    margin-top: 100px;
     align-items: center;
-    justify-content: center;
-    align-content: center;
+    display: flex;
+
+
+
 }
 
 .homepage .box-1 .bar{
+    margin-right: 20px;
     width: 10px;
-    height: 80px;
+    height: 90px;
     background-color: #FBBE63;
 }
 .homepage .box-1 .text{
-    margin-top: 50px;
+
     font-size: 25px;
     font-weight: 700;
     color: #fff;
-    line-height: 50px;
+
+
 }
