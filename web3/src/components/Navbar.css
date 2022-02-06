@@ -1,5 +1,5 @@
 
-.navbar{
+.navbar {
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
@@ -10,47 +10,50 @@
     justify-content: space-between;
 }
 
-.navbar .user-bar{
+.navbar .user-bar {
     display: flex;
     align-items: center;
-    
+
 }
 
-.navbar .wallet{
+.navbar .wallet {
     width: 150px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.navbar .avatar{
+.navbar .avatar {
     margin-left: 40px;
 }
 
-.navbar .user{
+.navbar .user {
     margin-left: 20px;
 }
 
-.navbar .user .name{
+.navbar .user .name {
     font-size: 25px;
     font-weight: 700;
 }
 
-.navbar .logo{
+.navbar .logo {
     margin-left: 20px;
     margin-right: 40px;
     font-size: 25px;
     font-weight: 600;
     color: #717171;
 }
-.navbar .logo .purple{
+
+.navbar .logo .purple {
     color: #9773FF;
 }
-.navbar .avatar img{
+
+.navbar .avatar img {
     height: 80px;
     width: 80px;
 }
-.navbar .home{
+
+.navbar .home {
     display: flex;
     margin-left: 50px;
     font-weight: 700;

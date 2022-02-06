@@ -1,25 +1,28 @@
-.welcome{
+.welcome {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.welcome .title{
+
+.welcome .title {
     margin-top: 80px;
     font-size: 50px;
     font-weight: 700;
     color: #E7F1FE;
 }
-.welcome .text{
+
+.welcome .text {
     margin-top: 20px;
     font-size: 20px;
 }
 
-.welcome .selections{
+.welcome .selections {
     margin-top: 40px;
     display: flex;
     gap: 60px;
 }
-.welcome .select{
+
+.welcome .select {
     display: block;
     width: 300px;
     max-width: 400px;
@@ -27,7 +30,7 @@
     border-radius: 10px;
 }
 
-.welcome .select li{
+.welcome .select li {
     display: flex;
     align-items: center;
     width: 100%;
@@ -36,19 +39,21 @@
 
 }
 
-.welcome .select .item{
+.welcome .select .item {
     display: flex;
     align-items: center;
     align-content: center;
     width: 150px;
 }
-.welcome .select li img{
+
+.welcome .select li img {
     width: 30px;
     height: 30px;
     margin-right: 20px;
 
 }
-.welcome .select ul{
+
+.welcome .select ul {
     display: flex;
     flex-direction: column;
     list-style-type: none;
@@ -57,11 +62,11 @@
     margin-bottom: 10px;
 }
 
-.welcome .select-title{
+.welcome .select-title {
     height: 40px;
     margin-bottom: 10px;
     background-color: #202020;
-    color:#fff;
+    color: #fff;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     text-align: center;
@@ -69,7 +74,7 @@
 
 }
 
-.welcome .start-form{
+.welcome .start-form {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -83,25 +88,25 @@
     margin-bottom: 60px;
 }
 
-.welcome .talk{
+.welcome .talk {
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
-.talk .avatar-1{
+.talk .avatar-1 {
     height: 200px;
     width: 200px;
 }
 
-.talk .avatar-2{
+.talk .avatar-2 {
     height: 200px;
     width: 200px;
     transform: scaleX(-1);
 }
 
-.welcome .baloon{
+.welcome .baloon {
     display: flex;
     border-radius: 10px;
     background-color: #EEEEEE;
@@ -112,28 +117,29 @@
     text-align: center;
 }
 
-.welcome .join{
+.welcome .join {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.welcome .join input{
+.welcome .join input {
     width: 200px;
     height: 40px;
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 20px;
-    border:1px solid rgb(207, 207, 207);
+    border: 1px solid rgb(207, 207, 207);
     border-radius: 10px;
 }
-.welcome .join button{
+
+.welcome .join button {
     width: 100%;
     height: 50px;
     background-color: #9773FF;
     border: none;
     border-radius: 10px;
-    color:white;
+    color: white;
     box-shadow: 10px 15px 20px 0px rgba(0, 0, 0, 0.15);
 }
