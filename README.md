@@ -56,9 +56,13 @@ Our journey begins with language.
 
 # The Future of LingoSwap
 We will expand the category of learning.
+
 Especially, programming category.
+
 There are millions of tech jobs in the world and the number of that has been increasing year after year.
+
 However, it costs money to learn programming in some cases.
+
 We would like to change that situation and advanced the education system all over the world.
 
 
