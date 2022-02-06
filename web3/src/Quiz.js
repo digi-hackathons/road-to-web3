@@ -1,7 +1,11 @@
 import React, {useState, useEffect} from "react";
 import Navbar from "./components/Navbar";
 import "./css/Quiz.css"
-
+import iota from "iota-array";
+import Web3 from 'web3';
+import LoadLingoStorage from "./contracts/lingostorage";
+import { getIpfsImagesWithCaptions, getMockImages } from "./utils/ipfs.mjs"
+import { shuffleArray } from "./utils/array_utils"
 
 function Continue(props, setSelected, setChecked) {
     if (props.step < props.steps - 1) {
@@ -25,9 +29,9 @@ function Next(props) {
 
 
 function borderColor(selected, index, checked, imagesOrder, testOrder, currentStep) {
-    if (selected == index) { // Se foi Selecionado
+    if (selected === index) { // Se foi Selecionado
         if (checked) { // Se a validação ja foi ativada
-            if (imagesOrder[index] == testOrder[currentStep]) //Se está correto
+            if (imagesOrder[index] === testOrder[currentStep]) //Se está correto
             {
                 return "right-choice"
             } else { //Se estiver incorreto
@@ -44,9 +48,9 @@ function borderColor(selected, index, checked, imagesOrder, testOrder, currentSt
 
 function checkButton(selected, checked, props, setSelected, setChecked) {
 
-    if (selected != undefined) {
+    if (selected !== undefined) {
         if (checked) {
-            if (props.step == 2) {
+            if (props.step === 2) {
                 window.location.href = "/reward";
             } else {
                 Continue(props, setSelected, setChecked)
@@ -111,48 +115,36 @@ function Teach(props) {
                     <img src={props.images[props.step].image}/>
                 </div>
                 <button
-                    onClick={() => Next(props)}>{props.step == props.steps - 1 ? "Start Challenge" : "Next"}</button>
+                    onClick={() => Next(props)}>{props.step === props.steps - 1 ? "Start Challenge" : "Next"}</button>
             </div>
         </div>
     </div>;
 }
 
+function retrieveImagesMetadataCid() {
+    const contract = LoadLingoStorage();
+    return contract.methods.get_images_dir_cid().call();
+}
+
+
+
 function Quiz() {
     const [wallet, setWallet] = useState();
     const [nickname, setNickname] = useState("Nickname")
-    const [images, setImages] = useState([
-        {
-            "image": "https://images.unsplash.com/photo-1629567508174-f59400e6d329?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=802&q=80",
-            "caption": "コーヒー"
-        },
-        {
-            "image": "https://images.unsplash.com/photo-1612506266679-606568a33215?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-            "caption": "アボカド"
-        },
-        {
-            "image": "https://images.unsplash.com/photo-1581375321224-79da6fd32f6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-            "caption": "ココナッツ"
-        },
-    ]);
+
     const [inQuiz, setInQuiz] = useState(true);
     const [step, setStep] = useState(0);
-    const maxSteps = 3;
-    const imagesOrder = [0, 1, 2]
-    const testOrder = [0, 1, 2]
-    //Shuffle
-    for (var i = imagesOrder.length - 1; i > 0; i--) {
-        var n = Math.floor(Math.random() * (i + 1));
-        var tmp = imagesOrder[i]
-        imagesOrder[i] = imagesOrder[n];
-        imagesOrder[n] = tmp;
-    }
 
-    for (var i = testOrder.length - 1; i > 0; i--) {
-        var n = Math.floor(Math.random() * (i + 1));
-        var tmp = testOrder[i]
-        testOrder[i] = testOrder[n];
-        testOrder[n] = tmp;
-    }
+    // TODO: need to read it from nav bar
+    const root_cid = retrieveImagesMetadataCid();
+    const SELECTED_LANGUAGE = "japanese";
+    const [images, setImages] = useState(getIpfsImagesWithCaptions(root_cid, SELECTED_LANGUAGE));
+    const imagesOrder = iota(images.length);
+    shuffleArray(imagesOrder);
+    const testOrder = iota(images.length);
+    shuffleArray(testOrder);
+    const maxSteps = 3;
+
     return inQuiz ?
         <Teach wallet={wallet} nickname={nickname} images={images} setWallet={setWallet} setNickname={setNickname}
                inQuiz={inQuiz} step={step} setStep={setStep} setInQuiz={setInQuiz} steps={maxSteps}/> :
