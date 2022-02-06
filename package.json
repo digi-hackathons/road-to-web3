@@ -1,7 +1,9 @@
 {
+  "name": "lingoswap",
   "devDependencies": {
     "hardhat-deploy": "^0.10.4",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.5"
-  }
+  },
+  "dependencies": {}
 }
