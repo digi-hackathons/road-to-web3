@@ -1,17 +1,10 @@
 /** Only used for prototyping and testing. */
-import {create} from 'ipfs-http-client';
+import {getLinks} from '../web3/src/utils/ipfs.mjs'
 import * as fs from 'fs';
+import {homedir} from 'os';
+import {join} from 'path';
 
-async function getLinks(ipfsPath) {
-    const url = 'https://gateway.pinata.cloud/'
-    const ipfs = create({url})
-    const links = []
-    for await (const link of ipfs.ls(ipfsPath)) { links.push(link) }
-    console.log(links)
-    return links
-}
-
-const links = await getLinks("QmRqcTyPLu2PCfAwQEZN121myWEYpb5E5udKLygBYYUVVL")
+const links = await getLinks("QmRqcTyPLu2PCfAwQEZN121myWEYpb5E5udKLygBYYUVVL", "https://dweb.link/api/v0")
 
 for (const l of links) {
     const name = l.name.replace(/\.[^/.]+$/, "");
@@ -28,11 +21,15 @@ for (const l of links) {
     }`;
     console.log(json_template)
 
-    const filename = `./metadata-out/${name}_metadata.json`;
+    const out_dir = join(homedir(), "metadata-out");
+    if (fs.existsSync(out_dir)) {
+        fs.rmSync(out_dir, {recursive: true})
+    }
+    fs.mkdirSync(out_dir)
+    const filename = join(homedir(), "metadata-out", `${name}_metadata.json`)
     try {
         fs.unlinkSync(filename);
-    }
-    catch (e) {}
+    } catch (e) {}
 
-    fs.writeFileSync(filename, JSON.stringify(JSON.parse(json_template),null,2));
+    fs.writeFileSync(filename, JSON.stringify(JSON.parse(json_template), null, 2));
 }

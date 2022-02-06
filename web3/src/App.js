@@ -40,7 +40,7 @@ function App(props) {
                         url=""
                         title="Earn by Learning"
                         desc="Do you want to learn new language? Let’s start from below."
-                        button={wallet == undefined ? "CONNECT" : "START"}
+                        button={wallet === undefined ? "CONNECT" : "START"}
                         click={() => connect("/welcome")}
                     />
                     <Card
@@ -48,7 +48,7 @@ function App(props) {
                         url=""
                         title="Earn by Teaching"
                         desc="Do you want to help someone learning your language? Please join from below."
-                        button={wallet == undefined ? "CONNECT" : "JOIN"}
+                        button={wallet === undefined ? "CONNECT" : "JOIN"}
                         click={() => connect("/welcome")}
                     />
                 </div>
