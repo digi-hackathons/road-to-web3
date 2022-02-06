@@ -35,10 +35,15 @@ Our journey begins with language.
 # How it works?
 
 1.Visit our site.(URL)
+
 2.Connect your wallet.
+
 3.Choose your preference(become teacher or Learner) 
+
 4.Make a quiz or solve problem.
+
 5.(when you are learner)When you get higher score than certain point, you will get token.
+
 6.(when you are teacher)When your quiz is published and solved by someone, you will get small token.
 
 
