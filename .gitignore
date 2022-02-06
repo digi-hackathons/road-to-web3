@@ -440,3 +440,4 @@ dist
 /backend/artifacts/
 /backend/cache/
 /web3/public/
+/web3/build/
