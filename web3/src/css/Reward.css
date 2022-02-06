@@ -3,14 +3,15 @@
     justify-content: center;
     align-content: center;
 }
-.reward .wrapper{
-    display:flex;
+
+.reward .wrapper {
+    display: flex;
     width: 1000px;
     height: 700px;
     background-color: #fff;
 }
 
-.reward .status img{
+.reward .status img {
     height: 10px;
     width: 10px;
 }
