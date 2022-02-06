@@ -149,7 +149,9 @@ function Quiz() {
     const [images, setImages] = useState(getIpfsImagesWithCaptions(root_cid, SELECTED_LANGUAGE));
 
    if(!isImagesSet){
-    setImages(getIpfsImagesWithCaptions(root_cid, SELECTED_LANGUAGE));
+    var downloaded = getIpfsImagesWithCaptions(root_cid, SELECTED_LANGUAGE)
+    shuffleArray(downloaded)
+    setImages(downloaded.slice(0, 3));
     setIsImagesSet(true);
    }
 
