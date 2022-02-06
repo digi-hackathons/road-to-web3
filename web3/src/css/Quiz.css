@@ -1,11 +1,12 @@
 
-.quiz{
+.quiz {
     height: 100%;
     display: flex;
     justify-content: center;
 
 }
-.quiz .name{
+
+.quiz .name {
     display: flex;
     border-radius: 10px;
     height: 60px;
@@ -17,7 +18,8 @@
     font-size: 30px;
     font-weight: 700;
 }
-.quiz .block{
+
+.quiz .block {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,14 +32,14 @@
     border-radius: 10px;
 }
 
-.quiz img{
+.quiz img {
     height: 300px;
     width: 300px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.quiz button{
+.quiz button {
     width: 300px;
     height: 50px;
     border: none;
@@ -51,14 +53,14 @@
 }
 
 
-
-.challange{
+.challange {
     height: 100%;
     display: flex;
     justify-content: center;
 
 }
-.challange .name{
+
+.challange .name {
     display: flex;
     border-radius: 10px;
     height: 60px;
@@ -70,7 +72,8 @@
     font-size: 30px;
     font-weight: 700;
 }
-.challange .block{
+
+.challange .block {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,7 +86,7 @@
     border-radius: 10px;
 }
 
-.challange img{
+.challange img {
     height: 250px;
     width: 250px;
     object-fit: cover;
@@ -91,12 +94,13 @@
 }
 
 
-.challange .options{
+.challange .options {
     display: flex;
     gap: 30px;
-    
+
 }
-.challange .border{
+
+.challange .border {
 
     display: flex;
     justify-content: center;
@@ -109,7 +113,7 @@
     margin-bottom: 10px;
 }
 
-.challange .active{
+.challange .active {
     margin-top: 10px;
     display: flex;
     justify-content: center;
@@ -121,7 +125,7 @@
 
 }
 
-.challange .button-active{
+.challange .button-active {
     width: 300px;
     height: 50px;
     border: none;
@@ -134,7 +138,7 @@
     box-shadow: 10px 15px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
-.challange .button-disabled{
+.challange .button-disabled {
     width: 300px;
     height: 50px;
     border: none;
