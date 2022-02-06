@@ -77,11 +77,3 @@ Backend:
 
 
 
-Contract Deployments:(Do you need this?)
-
--| Rinkeby | Mumbai 
--|---------|--------
-[superAccountabilityX](./SuperAccountabilityX.sol)| [0x919753ca7f9d9B24a93e4823B9b8cB657bA5e0b5](https://rinkeby.etherscan.io/address/0x919753ca7f9d9B24a93e4823B9b8cB657bA5e0b5) | [0xCdd7bDdF25c18c3830a60b73b5BFc40Ee3E60088](https://mumbai.polygonscan.com/address/0xCdd7bDdF25c18c3830a60b73b5BFc40Ee3E60088) 
-[superAccountabilityNFT](./SuperAccountabilityNFT.sol) | [0x1eD52D1aD1633EBdA246dF5f5E543a8300014535](https://rinkeby.etherscan.io/address/0x1eD52D1aD1633EBdA246dF5f5E543a8300014535) | [0xfB4979C9d002bfeB26E21012CaD954fCb3791022](https://mumbai.polygonscan.com/address/0xfB4979C9d002bfeB26E21012CaD954fCb3791022) 
-
-We also deployed a simple version of OnTrac ([SimpleAccountability.sol](./SuperAccountabilityX.sol)) on Harmony at address [0x1B11B9AD3f07aC613f20d4009337D64653A67B67](https://explorer.harmony.one/address/0x1b11b9ad3f07ac613f20d4009337d64653a67b67) since Superfluid is not deployed on there.
