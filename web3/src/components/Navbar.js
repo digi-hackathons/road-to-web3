@@ -6,6 +6,10 @@ import {useWeb3React} from "@web3-react/core";
 
 
 
+function redirect(){
+    window.location.href = "/quiz";
+}
+
 
 function Profile(props){
 
@@ -89,8 +93,8 @@ function Navbar(props) {
                         <img className="lang" src="/images/japan.png"></img>
                         <img className="lang-sort" src="/images/sort.png"></img>
                     </div>      
-                    <button className="not-connected">
-                        Not connected
+                    <button onClick={()=> redirect()}className={[props.wallet == undefined ? "not-connected" : "connected"].join(" ")}>
+                        {props.wallet == undefined ? "Not connected" : "go"}
                     </button>
                     </div>
 

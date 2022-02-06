@@ -84,11 +84,11 @@ export function getIpfsImagesWithCaptions() {
         },
         {
             "image": "https://i.imgur.com/Ed6cmJ7.jpeg",
-            "caption": "マンゴー",
+            "caption": "パパイヤ",
         },
         {
             "image": "https://i.imgur.com/0bb0Ypk.jpeg",
-            "caption": "マンゴー",
+            "caption": "ブルーベリ",
         },
         {
             "image": "https://i.imgur.com/qSJq8lm.jpeg",
