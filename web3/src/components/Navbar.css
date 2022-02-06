@@ -12,6 +12,8 @@
 }
 
 .navbar .user-bar {
+    height: 100px;
+    width: 300px;
     margin-left: 20px;
     margin-right: 20px;
     display: flex;
@@ -29,7 +31,8 @@
 }
 
 .navbar .avatar {
-    margin-left: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .navbar .user {
@@ -130,3 +133,26 @@
     height: 10px;
     width: 10px;
 }
+
+.navbar .connect {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    width: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+
+    align-items: center;
+    border-radius: 10px;
+
+}
+
+.navbar .connect button{
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: #9773FF;
+}
+

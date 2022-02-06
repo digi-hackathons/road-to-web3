@@ -3,6 +3,31 @@ import "./Navbar.css";
 import {injected} from "../controller/Connectors";
 import {useWeb3React} from "@web3-react/core";
 
+
+
+
+
+function Profile(props){
+
+    if(props.wallet != undefined){
+        return <div className="user-bar">
+    <div className="avatar">
+        <img src="images/face.png"/>
+    </div>
+    <div className="user">
+        <div className="name">{props.nickname}</div>
+        <div className="wallet">{props.wallet}</div>
+        </div>
+
+    </div>
+    }
+    else{
+        return <div className="connect"><button  onClick={()=>props.connect()}>Connect Wallet</button></div>
+    }
+    
+}
+
+
 function Navbar(props) {
 
 
@@ -28,6 +53,15 @@ function Navbar(props) {
         }
 
     });
+
+    async function connect(to) {
+        try {
+            await activate(injected);
+        } catch (ex) {
+            console.log(ex);
+        }
+    }
+    
 
 
     return (
@@ -61,16 +95,7 @@ function Navbar(props) {
                     </div>
 
                 </div>
-                <div className="user-bar">
-                        <div className="avatar">
-                            <img src="images/face.png"/>
-                        </div>
-                        <div className="user">
-                            <div className="name">{props.nickname}</div>
-                            <div className="wallet">{props.wallet}</div>
-                        </div>
-
-                    </div>
+                <Profile wallet={props.wallet} nickname={props.nickname} connect={connect}/>
                 
 
 
