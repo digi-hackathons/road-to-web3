@@ -3,63 +3,106 @@ import Navbar from "./components/Navbar";
 import "./css/Quiz.css"
 
 
+function Continue(props, setSelected, setChecked){
+    if(props.step < props.steps-1){
+        props.setStep(props.step+1)
+        setSelected()
+        setChecked(false)
+    }
 
+    
+}
 
 function Next(props){
     if(props.step < props.steps-1){
         props.setStep(props.step+1)
     }
     else{
-        props.setInQuiz(false)        
+        props.setInQuiz(false)
+        props.setStep(0)     
     }
     
 }
 
+
+
+function borderColor(selected, index, checked, imagesOrder,testOrder,currentStep){
+    if(selected==index){ // Se foi Selecionado
+        if(checked){ // Se a validação ja foi ativada
+            if(imagesOrder[index]==testOrder[currentStep]) //Se está correto
+            {
+                return "right-choice"
+            }
+            else{ //Se estiver incorreto
+                return "wrong-choice"
+            }
+        }
+        else{
+            return "active"
+        }
+    }
+    else{
+        return "border"
+    }
+}
+
+
+function checkButton(selected,checked,props,setSelected,setChecked){
+
+    if(selected != undefined){
+        if(checked){
+            if(props.step==2){
+                window.location.href="/reward";
+            }
+            else{
+                Continue(props,setSelected,setChecked)
+            }
+        }
+        else{
+            setChecked(true)
+        }
+    }
+
+}
+
+
 function Challange(props){
     const [selected, setSelected] = useState();
     const [checked, setChecked] = useState(false);
-    const order = [0,1,2]
-    //Shuffle
-    for(var i = order.length-1; i > 0; i--){
-        var n = Math.floor(Math.random() * (i + 1));
-        var tmp = order[i]
-        order[i] = order[n];
-        order[n] = tmp;
-
-
-    }
-    console.log(order)
-
+    
 
     return <div className="main">
     <Navbar nickname={props.nickname} wallet={props.wallet} setWallet={props.setWallet}/>
     <div className="challange">
         <div className="block">
-            <div className="name">Which is {props.images[props.step].caption}</div>
+            <div className="name">Which is {props.images[props.testOrder[props.step]].caption}</div>
             <div className="options">
-            <div className="image" onClick={()=>setSelected(0)}>
-                <div className={[ selected==0 ? "active" : "border" ].join(" ")}>
-                <img src={props.images[order[0]].image}/>
+            <div className="image" onClick={checked ? {} : ()=>setSelected(0)}>
+                <div className={borderColor(selected,0,checked,props.order,props.testOrder,props.step)}>
+                <img src={props.images[props.order[0]].image}/>
                 </div>
                 
                 <div className="response"></div>
             </div>
-            <div className="image" onClick={()=>setSelected(1)}>
-            <div className={[selected==1?"active":"border"].join(" ")}>
-            <img src={props.images[order[1]].image}/>
+            <div className="image" onClick={checked ? {} : ()=>setSelected(1)}>
+            <div className={borderColor(selected,1,checked,props.order,props.testOrder,props.step)}>
+            <img src={props.images[props.order[1]].image}/>
             </div>
                 
                 <div className="response"></div>
             </div>
-            <div className="image" onClick={()=>setSelected(2)}>
-            <div className={[selected==2?"active":"border"].join(" ")}>
-            <img src={props.images[order[2]].image}/>
+            <div className="image" onClick={checked ? {} : ()=>setSelected(2)}>
+            <div className={borderColor(selected,2,checked,props.order,props.testOrder,props.step)}>
+            <img src={props.images[props.order[2]].image}/>
             </div>
                 
                 <div className="response"></div>
             </div>
             </div>
-            <button className={selected === undefined ? "button-disabled" : "button-active"} onClick={()=>setChecked(true)}>{checked ? "Continue" :"Check"}</button>
+            <button className={selected === undefined ? "button-disabled" : "button-active"} 
+            onClick={()=> checkButton(selected,checked,props,setSelected,setChecked)}>
+                {checked ? "Continue" :"Check"}
+            </button>
         </div>
     </div>
 </div>;
@@ -90,10 +133,24 @@ function Quiz() {
     ]);
     const [inQuiz, setInQuiz] = useState(true);
     const [step,setStep] = useState(0);
-    const steps = 3;
+    const maxSteps = 3;
+    const imagesOrder = [0,1,2]
+    const testOrder = [0,1,2]
+    //Shuffle
+    for(var i = imagesOrder.length-1; i > 0; i--){
+        var n = Math.floor(Math.random() * (i + 1));
+        var tmp = imagesOrder[i]
+        imagesOrder[i] = imagesOrder[n];
+        imagesOrder[n] = tmp;
+    }
 
-
-  return inQuiz ? <Teach wallet={wallet} nickname={nickname} images={images} setWallet={setWallet} setNickname={setNickname} inQuiz={inQuiz} step={step} setStep={setStep} setInQuiz={setInQuiz} steps={steps}/> : <Challange wallet={wallet} nickname={nickname} images={images} setWallet={setWallet} setNickname={setNickname} inQuiz={inQuiz} step={step} setStep={setStep} setInQuiz={setInQuiz} steps={steps}/>
+    for(var i = testOrder.length-1; i > 0; i--){
+        var n = Math.floor(Math.random() * (i + 1));
+        var tmp = testOrder[i]
+        testOrder[i] = testOrder[n];
+        testOrder[n] = tmp;
+    }
+  return inQuiz ? <Teach wallet={wallet} nickname={nickname} images={images} setWallet={setWallet} setNickname={setNickname} inQuiz={inQuiz} step={step} setStep={setStep} setInQuiz={setInQuiz} steps={maxSteps}/> : <Challange wallet={wallet} nickname={nickname} images={images} setWallet={setWallet} setNickname={setNickname} inQuiz={inQuiz} step={step} setStep={setStep} setInQuiz={setInQuiz} steps={maxSteps} order={imagesOrder} testOrder={testOrder}/>
 }
 
 export default Quiz;

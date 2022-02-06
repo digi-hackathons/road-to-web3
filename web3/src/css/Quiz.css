@@ -24,8 +24,8 @@
     align-items: center;
     margin-top: 60px;
     margin-bottom: 60px;
-    width: 50vw;
-    height: 70vh;
+    width: 1000px;
+    height: 650px;
     background-color: #fff;
     border-radius: 10px;
 }
@@ -117,6 +117,30 @@
     height: 270px;
     width: 270px;
     background-color: #e2dafd;
+    border-radius: 10px;
+
+}
+
+.challange .right-choice{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 270px;
+    width: 270px;
+    background-color: #85FFB6;
+    border-radius: 10px;
+
+}
+
+.challange .wrong-choice{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 270px;
+    width: 270px;
+    background-color: #FF646D;
     border-radius: 10px;
 
 }
