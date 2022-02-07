@@ -4,7 +4,7 @@ import "./css/Home.css";
 
 function Home() {
 	const [wallet, setWallet] = useState();
-	const [nickname, setNickname] = useState("Nickname");
+	const [nickname, setNickname] = useState("Rafael");
 	return (
 		<div className="homepage">
 			<Navbar nickname={nickname} wallet={wallet} setWallet={setWallet} />
