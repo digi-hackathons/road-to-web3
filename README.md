@@ -1,12 +1,13 @@
 # Preface
+
+
 Hello world! We are LingoSwap.
 
+![LINGOSWAP](https://i.imgur.com/VASK8wg.png)
 
 # Live Demo(URL)
 
-
-
-# IMPORTANT NOTE (If there is)
+https://lingoswap.vercel.app/
 
 
 
